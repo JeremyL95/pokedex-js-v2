@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./img/pokeball.ico" type="image/x-icon">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body>
+    <div id="pokedex" class="container">
+        <div id="pokedexTop" class="pokedex-background">
+            <div id="searchBar" class="pokedex-search-bar">
+                <div class="btn-search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input type="text" class="search-bar" placeholder="Search Pokemon">
+                </div>
+
+                <h3 id="pokemonID"></h3>
+            </div>
+
+            <div id="pokemonImage" class="pokedex-data-image">
+                <img src="" alt="pokemon-image">
+            </div>
+        </div>
+
+        <div id="pokedexBottom" class="pokedex-data">
+            <div id="pokemonDetails">
+                <div class="pokemon-details-name">
+                    <h3 id="pokemonName"></h3>
+                </div>
+
+                <div id="pokemonTypes" class="pokemon-details-type"></div>
+
+                <div class="pokemon-details-ratio">
+                    <div class="pokemon-details-ratio__weight">
+                        <span id="pokemonWeight"></span>
+                        <span>Weight</span>
+                    </div>
+                    <div class="pokemon-details-ratio__height">
+                        <span id="pokemonHeight"></span>
+                        <span>Height</span>
+                    </div>
+                </div>
+
+                <div class="pokemon-details-stats">
+                    <h5>Base Stats</h5>
+
+                    <!-- Health Points -->
+                    <div class="pokemon-stat-row">
+                        <div class="stat-description">
+                            HP
+                        </div>
+
+                        <div class="stat-figure"></div>
+
+                        <div class="stat-bar">
+                            <div class="stat-bar-outer">
+                                <div class="stat-bar-inner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Attack -->
+                    <div class="pokemon-stat-row">
+                        <div class="stat-description">
+                            ATK
+                        </div>
+
+                        <div class="stat-figure"></div>
+
+                        <div class="stat-bar">
+                            <div class="stat-bar-outer">
+                                <div class="stat-bar-inner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Defense -->
+                    <div class="pokemon-stat-row">
+                        <div class="stat-description">
+                            DEF
+                        </div>
+
+                        <div class="stat-figure"></div>
+
+                        <div class="stat-bar">
+                            <div class="stat-bar-outer">
+                                <div class="stat-bar-inner">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Attack -->
+                    <div class="pokemon-stat-row">
+                        <div class="stat-description">
+                            SP ATK
+                        </div>
+
+                        <div class="stat-figure"></div>
+
+                        <div class="stat-bar">
+                            <div class="stat-bar-outer">
+                                <div class="stat-bar-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Defense -->
+                    <div class="pokemon-stat-row">
+                        <div class="stat-description">
+                            SP DEF
+                        </div>
+
+                        <div class="stat-figure"></div>
+
+                        <div class="stat-bar">
+                            <div class="stat-bar-outer">
+                                <div class="stat-bar-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Speed -->
+                    <div class="pokemon-stat-row">
+                        <div class="stat-description">
+                            SPD
+                        </div>
+
+                        <div class="stat-figure"></div>
+
+                        <div class="stat-bar">
+                            <div class="stat-bar-outer">
+                                <div class="stat-bar-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <footer id="footer">
+        hehhe
+    </footer> -->
+
+    <script src="app.js" defer></script>
+</body>
+
+</html>

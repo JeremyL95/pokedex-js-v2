@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --default-primary-text-color: #fff;
+    --default-background-color: #d6d6d6;
+}
+
+@mixin flexCenter($display, $justify, $align, $direction) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
+@mixin widthHeight($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "san-serif";
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--default-background-color);
+    height: 100vh;
+    @include flexCenter(flex, center, center, row);
+}
+
+#pokedex {
+    @include widthHeight(300px, 600px);
+    border-radius: 5px;
+    padding: 0.5rem;
+    transition: color 0.5s ease-in-out;
+}
+
+.pokedex-background {
+    height: 40%;
+    background: url(../img/pokeBg.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+
+    .pokedex-data-image img {
+        @include widthHeight(200px, 200px);
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+
+    .pokedex-search-bar {
+        @include flexCenter(flex, space-between, center, row);
+
+        .btn-search {
+            .fa-search {
+                color: var(--default-primary-text-color);
+            }
+
+            .search-bar {
+                border: none;
+                outline: none;
+                background-color: transparent;
+                color: var(--default-primary-text-color);
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.4);
+                }
+            }
+        }
+
+        #pokemonID {
+            margin-inline: 0.5rem;
+            color: var(--default-primary-text-color);
+        }
+    }
+}
+
+.pokedex-data {
+    height: 60%;
+    background-color: var(--default-primary-text-color);
+    border-radius: 8px;
+    @include flexCenter(flex, center, center, column);
+
+    .pokemon-details-name,
+    .pokemon-details-type {
+        @include flexCenter(flex, center, flex-start, row);
+        margin-block: 0.5rem;
+    }
+
+    .pokemon-details-type {
+        @include flexCenter(flex, center, center, row);
+    }
+
+    .pokemon-type-tag {
+        margin-inline: 0.5rem;
+        padding: 0.5rem;
+        border-radius: 8px;
+        font-size: 0.75rem;
+        color: var(--default-primary-text-color);
+    }
+
+    .pokemon-details-ratio {
+        @include flexCenter(flex, space-between, flex-start, row);
+        padding-inline: 2rem;
+
+        &__weight,
+        &__height {
+            @include flexCenter(flex, flex-start, center, column);
+            font-size: 0.75rem;
+            margin-block: 0.5rem;
+        }
+    }
+
+    .pokemon-details-stats {
+        h5 {
+            text-align: center;
+            margin-block: 0.5rem;
+        }
+
+        .pokemon-stat-row {
+            display: flex;
+
+            .stat-description,
+            .stat-figure {
+                font-size: 14px;
+            }
+
+            .stat-description {
+                width: 25%;
+                text-align: right;
+                padding-right: 0.5rem;
+                transition: color 0.5s ease-in-out;
+            }
+
+            .stat-figure {
+                width: 20%;
+                text-align: center;
+            }
+
+            .stat-bar {
+                width: 55%;
+                @include flexCenter(flex, flex-start, center, row);
+            }
+
+            .stat-bar-outer {
+                @include widthHeight(150px, 6px);
+                background-color: #e9e9e9;
+                border-radius: 10px;
+                transition: color 0.5s ease-in-out;
+
+                .stat-bar-inner {
+                    @include widthHeight(40%, 6px);
+                    border-radius: 10px;
+                    transition: color 0.5s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+// Pokemon Types Tag Colors
+.rock {
+    background-color: rgba(182, 158, 49);
+}
+
+.ghost {
+    background-color: rgb(112, 85, 155);
+}
+
+.steel {
+    background-color: rgb(183, 185, 208);
+}
+
+.water {
+    background-color: rgb(100, 147, 235);
+}
+
+.grass {
+    background-color: rgb(116, 203, 72);
+}
+
+.psychic {
+    background-color: rgb(251, 85, 132);
+}
+
+.ice {
+    background-color: rgb(154, 214, 223);
+}
+
+.dark {
+    background-color: rgb(117, 87, 76);
+}
+
+.fairy {
+    background-color: rgb(230, 158, 172);
+}
+
+.normal {
+    background-color: rgb(170, 166, 127);
+}
+
+.fighting {
+    background-color: rgb(193, 34, 57);
+}
+
+.flying {
+    background-color: rgb(168, 145, 236);
+}
+
+.poison {
+    background-color: rgb(164, 62, 158);
+}
+
+.ground {
+    background-color: rgb(222, 193, 107);
+}
+
+.bug {
+    background-color: rgb(167, 183, 35);
+}
+
+.fire {
+    background-color: rgb(245, 207, 48);
+}
+
+.electric {
+    background-color: rgb(249, 207, 48);
+}
+
+.dragon {
+    background-color: rgb(112, 55, 255);
+}
