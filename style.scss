@@ -97,9 +97,11 @@ body {
     }
 
     .pokemon-type-tag {
+        width: 65px;
+        text-align: center;
         margin-inline: 0.5rem;
         padding: 0.5rem;
-        border-radius: 8px;
+        border-radius: 5px;
         font-size: 0.75rem;
         color: var(--default-primary-text-color);
     }

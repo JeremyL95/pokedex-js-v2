@@ -102,6 +102,9 @@ btnSearch.addEventListener('change', async(evt)=>{
 
     // Render Pokemon Weight
     pokemonWeight.innerText = `${pokemonData.weight / 10} KG`;
+
+    // Empty search bar after every search
+    btnSearch.value = "";
 });
 
 // add dynamic footer
