@@ -10,6 +10,7 @@ const statFigure = document. querySelectorAll('.stat-figure');
 const statOuterBar = document.querySelectorAll('.stat-bar-outer');
 const statInnerBar = document.querySelectorAll('.stat-bar-inner');
 const statTitleColor = document.querySelector('.pokemon-details-stats h5');
+const footer = document.querySelector('#footer');
 let pokemonElement;
 
 // Pokemon Type Color
@@ -102,6 +103,9 @@ btnSearch.addEventListener('change', async(evt)=>{
     // Render Pokemon Weight
     pokemonWeight.innerText = `${pokemonData.weight / 10} KG`;
 });
+
+// add dynamic footer
+footer.innerText = `©${new Date().getFullYear()} Jeremy Erik Leong`;
 
 (()=>{
     btnSearch.value = 'bulbasaur';

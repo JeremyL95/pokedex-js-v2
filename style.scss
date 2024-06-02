@@ -28,7 +28,7 @@ body {
     font-size: 16px;
     background-color: var(--default-background-color);
     height: 100vh;
-    @include flexCenter(flex, center, center, row);
+    @include flexCenter(flex, center, center, column);
 }
 
 #pokedex {
@@ -161,6 +161,12 @@ body {
             }
         }
     }
+}
+
+footer {
+    font-size: 12px;
+    margin-top: 1rem;
+    color: var(--default-primary-text-color);
 }
 
 // Pokemon Types Tag Colors
